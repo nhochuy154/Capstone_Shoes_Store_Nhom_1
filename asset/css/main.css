@@ -1,0 +1,308 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #ffffff;
+  background-color: #0f1923;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #ff6b00;
+}
+
+.site-header {
+  width: 100%;
+  z-index: 100;
+  padding: 20px 0;
+  background-color: #0f1923;
+}
+.site-header .navbar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.site-header .nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+.site-header .header-icons {
+  display: flex;
+  align-items: center;
+}
+.site-header .header-icons .icon-link {
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+.site-header .header-icons .cart-icon {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+.site-header .header-icons .cart-icon .cart-count {
+  background-color: #ff6b00;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  margin-left: 5px;
+}
+.site-header .header-icons .cart-icon .cart-text {
+  font-size: 0.8rem;
+  margin-left: 5px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .site-header .header-icons .cart-icon .cart-text {
+    display: inline;
+  }
+}
+
+.site-footer {
+  background-color: #070c11;
+  padding: 60px 0 30px;
+}
+.site-footer .footer-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.site-footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer .footer-links li {
+  margin-bottom: 10px;
+}
+.site-footer .footer-links li a {
+  color: #aaa;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.site-footer .footer-links li a:hover {
+  color: #ff6b00;
+  padding-left: 5px;
+}
+.site-footer address {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-style: normal;
+}
+.site-footer address p {
+  margin-bottom: 10px;
+}
+.site-footer .social-icons {
+  margin-top: 20px;
+}
+.site-footer .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.site-footer .social-icons a:hover {
+  background-color: #ff6b00;
+  color: #ffffff;
+}
+.site-footer .copyright {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #ff6b00;
+  border-color: #ff6b00;
+}
+.btn-primary:hover {
+  background-color: #cc5600;
+  border-color: #cc5600;
+}
+
+.hero-section {
+  background-image: linear-gradient(rgba(15, 25, 35, 0.7), rgba(15, 25, 35, 0.7)), url("../img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 25, 35, 0.3);
+}
+.hero-section .hero-title {
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  .hero-section .hero-title {
+    font-size: 3rem;
+  }
+}
+.hero-section .hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .hero-section .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+.featured-products {
+  padding: 80px 0;
+  background-color: #172635;
+}
+.featured-products .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.featured-products .product-card {
+  background-color: #0f1923;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+.featured-products .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.featured-products .product-card:hover .product-overlay {
+  opacity: 1;
+}
+.featured-products .product-card .product-image {
+  position: relative;
+  overflow: hidden;
+}
+.featured-products .product-card .product-image img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+.featured-products .product-card .product-image .product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 25, 35, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.featured-products .product-card .product-image .product-overlay .btn {
+  margin: 5px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+.featured-products .product-card .product-info {
+  padding: 20px;
+  text-align: center;
+}
+.featured-products .product-card .product-info .product-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.featured-products .product-card .product-info .product-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ff6b00;
+}
+
+.newsletter-container {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.newsletter-container .newsletter-image {
+  height: 100%;
+}
+.newsletter-container .newsletter-image img {
+  height: 100%;
+  object-fit: cover;
+}
+.newsletter-container .newsletter-content {
+  padding: 30px;
+  color: #0f1923;
+}
+.newsletter-container .newsletter-content .newsletter-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.newsletter-container .newsletter-content .newsletter-text {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.newsletter-container .newsletter-content .form-control {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  font-size: 0.9rem;
+}
+.newsletter-container .newsletter-content .form-control:focus {
+  box-shadow: none;
+  border-color: #ff6b00;
+}
+.newsletter-container .newsletter-content .btn-dark {
+  padding: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.newsletter-container .newsletter-content .form-check-label {
+  font-size: 0.8rem;
+  color: #666;
+}

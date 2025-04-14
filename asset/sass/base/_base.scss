@@ -1,0 +1,29 @@
+@use "../abstracts/variables";
+
+body {
+  font-family: variables.$font-primary;
+  color: $secondary-color;
+  background-color: $primary-color;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$secondary-color;
+
+  @include transition();
+
+  &:hover {
+    color: $accent-color;
+  }
+}

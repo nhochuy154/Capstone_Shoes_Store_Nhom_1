@@ -16,15 +16,398 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="./asset/css/main.css" />
   </head>
 
   <body>
-    <header>
-      <!-- place navbar here -->
+    <!-- Header Section -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./asset/img/logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">HOME</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  ALL DEMOS
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Demo 1</a></li>
+                  <li><a class="dropdown-item" href="#">Demo 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  PAGES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  CATEGORIES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Skiing</a></li>
+                  <li><a class="dropdown-item" href="#">Hiking</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  BLOG
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Latest News</a></li>
+                  <li><a class="dropdown-item" href="#">Articles</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="header-icons">
+              <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+              <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
+              <a href="#" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+                <span class="cart-text">MY CART</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
+
+    <!-- Hero Section -->
+    <section class="page-container">
+      <div
+        id="shoeCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img
+              src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/slideshow-1_8f45ff48-8631-4b20-826e-5f477c1502bd_1920x850.jpg?v=1614290763"
+              class="d-block w-100"
+              alt="Slide 1"
+            />
+            <div class="carousel-caption text-start">
+              <h2 class="text-white animate__animated animate__fadeInLeft">
+                The <span>Shoe</span> That Adapts to You
+              </h2>
+              <p
+                class="text-white-50 fs-1 animate__animated animate__fadeInRight"
+              >
+                Tennis Shoes
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img
+              src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/slideshow-2_1cdbfd27-ae25-4a38-9d4f-a913a692bea7_1920x850.jpg?v=1614290763"
+              class="d-block w-100"
+              alt="Slide 2"
+            />
+            <div class="carousel-caption text-start">
+              <h2 class="text-white animate__animated animate__zoomIn">
+                The <span>Shoe</span> That Adapts to You
+              </h2>
+              <p class="text-white-50 fs-1 animate__animated animate__zoomIn">
+                Street Style
+              </p>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img
+              src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/slideshow-3_4c7a7862-bfd8-4c8c-a7ac-37b5a7e7f191_1920x850.jpg?v=1614290763"
+              class="d-block w-100"
+              alt="Slide 3"
+            />
+            <div class="carousel-caption text-start">
+              <h2 class="text-white animate__animated animate__fadeInUp">
+                The <span>Shoe</span> That Adapts to You
+              </h2>
+              <p
+                class="text-white-50 fs-1 animate__animated animate__fadeInDown"
+              >
+                Football Shoes
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#shoeCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#shoeCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#shoeCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#shoeCarousel"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#shoeCarousel"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">FEATURED PRODUCTS</h2>
+        <div class="row">
+          <!-- Product 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://cdn2.cellphones.com.vn/x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-m55_2.png"
+                  alt="Product Image"
+                  class="img-fluid"
+                />
+                <div class="product-overlay">
+                  <a href="#" class="btn btn-sm btn-dark">Quick View</a>
+                  <a href="#" class="btn btn-sm btn-dark">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Alpine Ski Boots</h3>
+                <p class="product-price">$299.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://cdn2.cellphones.com.vn/x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-m55_2.png"
+                  alt="Product Image"
+                  class="img-fluid"
+                />
+                <div class="product-overlay">
+                  <a href="#" class="btn btn-sm btn-dark">Quick View</a>
+                  <a href="#" class="btn btn-sm btn-dark">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Touring Skis</h3>
+                <p class="product-price">$449.99</p>
+              </div>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://cdn2.cellphones.com.vn/x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-m55_2.png"
+                  alt="Product Image"
+                  class="img-fluid"
+                />
+                <div class="product-overlay">
+                  <a href="#" class="btn btn-sm btn-dark">Quick View</a>
+                  <a href="#" class="btn btn-sm btn-dark">Add to Cart</a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Winter Jacket</h3>
+                <p class="product-price">$199.99</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Modal -->
+    <div
+      class="modal fade"
+      id="newsletterModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="newsletter-container">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <div class="newsletter-image">
+                    <img
+                      src="https://via.placeholder.com/300x400"
+                      alt="Orange Shoes"
+                      class="img-fluid"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="newsletter-content p-4">
+                    <h3 class="newsletter-title">SIGN UP TO NEWSLETTER</h3>
+                    <p class="newsletter-text">
+                      Receive email-only deals, special offers & product
+                      exclusives
+                    </p>
+                    <form class="newsletter-form mt-4">
+                      <div class="mb-3">
+                        <input
+                          type="email"
+                          class="form-control"
+                          placeholder="ENTER YOUR EMAIL..."
+                        />
+                      </div>
+                      <button type="submit" class="btn btn-dark w-100">
+                        SUBSCRIBE
+                      </button>
+                    </form>
+                    <div class="form-check mt-3">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="dontShowAgain"
+                      />
+                      <label class="form-check-label" for="dontShowAgain">
+                        DON'T SHOW THIS POPUP AGAIN
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">ABOUT US</h5>
+            <p>
+              Binova is a premium outdoor gear shop specializing in high-quality
+              equipment for skiing, hiking, and outdoor adventures.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">CATEGORIES</h5>
+            <ul class="footer-links">
+              <li><a href="#">Skiing</a></li>
+              <li><a href="#">Hiking</a></li>
+              <li><a href="#">Camping</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">INFORMATION</h5>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">CONTACT US</h5>
+            <address>
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Mountain Road,
+                Alpine City
+              </p>
+              <p><i class="fas fa-phone me-2"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope me-2"></i> info@binova.com</p>
+            </address>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <p class="copyright">© 2023 Binova. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
@@ -38,5 +421,20 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".main-slider").slick({
+          autoplay: true,
+          autoplaySpeed: 5000,
+          arrows: false,
+          dots: true,
+          fade: false,
+        });
+      });
+    </script>
+
+    <!-- Custom JS -->
+    <script src="./asset/js/main.js"></script>
   </body>
 </html>
