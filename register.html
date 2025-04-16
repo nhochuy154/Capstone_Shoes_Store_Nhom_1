@@ -1,122 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Đăng Ký - Modern Shoes Store</title>
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <!-- Toastify CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
-    </head>
-    <body>
-        <header>
-            <h1>Loading...</h1>
-        </header>
-        <div class="register-container">
-            <div class="register-card">
-                <div class="register-header">
-                    <h1>Đăng Ký Tài Khoản</h1>
-                    <p>Tham gia cùng chúng tôi để có trải nghiệm mua sắm tốt nhất</p>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-                <form id="registerForm">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required />
-                                <div class="invalid-feedback">Vui lòng nhập email hợp lệ</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Họ và tên</label>
-                                <input type="text" class="form-control" id="name" name="name" required />
-                                <div class="invalid-feedback">Vui lòng nhập họ và tên</div>
-                            </div>
-                        </div>
-                    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Toastify CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <title>Đăng Ký - Modern Shoes Store</title>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="password" class="form-label">Mật khẩu</label>
-                                <input type="password" class="form-control" id="password" name="password" required />
-                                <div class="invalid-feedback">Mật khẩu phải có ít nhất 6 ký tự</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
-                                <input
-                                    type="password"
-                                    class="form-control"
-                                    id="confirmPassword"
-                                    name="confirmPassword"
-                                    required
-                                />
-                                <div class="invalid-feedback">Mật khẩu không khớp</div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="./asset/css/main.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img src="./asset/img/logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">HOME</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Product
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">NIKE</a></li>
+                  <li><a class="dropdown-item" href="#">ADIDAS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  PAGES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  CATEGORIES
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-lg-end"
+                  aria-labelledby="userDropdown"
+                >
+                  <li><a class="dropdown-item" href="#">Skiing</a></li>
+                  <li><a class="dropdown-item" href="#">Hiking</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  BLOG
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Latest News</a></li>
+                  <li><a class="dropdown-item" href="#">Articles</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="header-icons">
+              <a href="#" id="searchToggle" class="icon-link"
+                ><i class="fas fa-search"></i
+              ></a>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Số điện thoại</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" required />
-                                <div class="invalid-feedback">Vui lòng nhập số điện thoại hợp lệ</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label">Giới tính</label>
-                                <div class="gender-options">
-                                    <div class="gender-option active" data-gender="true">
-                                        <i class="fas fa-mars"></i> Nam
-                                    </div>
-                                    <div class="gender-option" data-gender="false"><i class="fas fa-venus"></i> Nữ</div>
-                                    <div class="gender-option" data-gender="other">
-                                        <i class="fas fa-genderless"></i> Khác
-                                    </div>
-                                </div>
-                                <input type="hidden" id="gender" name="gender" value="true" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn btn-register">
-                        <i class="fas fa-user-plus me-2"></i> Đăng Ký
-                    </button>
-                </form>
-
-                <div class="login-link">Đã có tài khoản? <a href="login.html">Đăng nhập</a></div>
-
-                <div class="social-login">
-                    <p>Hoặc đăng ký bằng</p>
-                    <div class="social-buttons">
-                        <a href="#" class="social-btn facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-btn google">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-btn twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
+              <a href="#" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+                <span class="cart-text">MY CART</span>
+              </a>
+              <!-- User dropdown -->
+              <div class="dropdown user-dropdown">
+                <a
+                  href="#"
+                  class="icon-link dropdown-toggle"
+                  id="userDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user"></i>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="userDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="/register.html">Đăng nhập</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/register.html">Đăng ký</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                </ul>
+              </div>
             </div>
+            <div class="search-bar" id="searchBar">
+              <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              <button type="button" id="closeSearch">
+                <i class="fas fa-times text-white"></i>
+              </button>
+            </div>
+          </div>
         </div>
-        <footer>
-            <h1>Loading...</h1>
-        </footer>
+      </nav>
+    </header>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Toastify JS -->
-        <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-        <!-- Custom JS -->
-        <script src="assets/js/register.js"></script>
-    </body>
+    <div class="register-container">
+      <div class="register-card">
+        <div class="register-header">
+          <h1>Đăng Ký Tài Khoản</h1>
+          <p>Tham gia cùng chúng tôi để có trải nghiệm mua sắm tốt nhất</p>
+        </div>
+
+        <form id="registerForm">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+                <div class="invalid-feedback">Vui lòng nhập email hợp lệ</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name" class="form-label">Họ và tên</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
+                <div class="invalid-feedback">Vui lòng nhập họ và tên</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Mật khẩu phải có ít nhất 6 ký tự
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="confirmPassword" class="form-label"
+                  >Xác nhận mật khẩu</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required
+                />
+                <div class="invalid-feedback">Mật khẩu không khớp</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="phone" class="form-label">Số điện thoại</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Vui lòng nhập số điện thoại hợp lệ
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="form-label">Giới tính</label>
+                <div class="gender-options">
+                  <div class="gender-option active" data-gender="true">
+                    <i class="fas fa-mars"></i> Nam
+                  </div>
+                  <div class="gender-option" data-gender="false">
+                    <i class="fas fa-venus"></i> Nữ
+                  </div>
+                  <div class="gender-option" data-gender="other">
+                    <i class="fas fa-genderless"></i> Khác
+                  </div>
+                </div>
+                <input type="hidden" id="gender" name="gender" value="true" />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-register">
+            <i class="fas fa-user-plus me-2"></i> Đăng Ký
+          </button>
+        </form>
+
+        <div class="login-link">
+          Đã có tài khoản? <a href="login.html">Đăng nhập</a>
+        </div>
+
+        <div class="social-login">
+          <p>Hoặc đăng ký bằng</p>
+          <div class="social-buttons">
+            <a href="#" class="social-btn facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-btn google">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#" class="social-btn twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="site-footer py-5">
+      <div class="container">
+        <!-- Newsletter Section -->
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-12">
+            <h5 class="text-white">Newsletter</h5>
+            <p class="color-green">
+              Sign up for newsletter to receive special offers and exclusive
+              news about Binova products
+            </p>
+          </div>
+          <div class="col-md-8">
+            <form action="/contact#contact_form" method="post" class="row g-2">
+              <input type="hidden" name="form_type" value="customer" />
+              <input type="hidden" name="utf8" value="✓" />
+              <input type="hidden" name="contact[tags]" value="newsletter" />
+              <div class="col-md-9">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="col-md-3">
+                <button
+                  style="padding: 12px 0px"
+                  type="submit"
+                  class="btn bg-green1 w-100 text-white"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row border-top pt-4">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">ABOUT US</h5>
+            <p>
+              <span class="color-green">Binova</span> is a premium outdoor gear
+              shop specializing in high-quality equipment for skiing, hiking,
+              and outdoor adventures.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">CATEGORIES</h5>
+            <ul class="footer-links">
+              <li><a href="#">Skiing</a></li>
+              <li><a href="#">Hiking</a></li>
+              <li><a href="#">Camping</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">INFORMATION</h5>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">CONTACT US</h5>
+            <address>
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Mountain Road,
+                Alpine City
+              </p>
+              <p><i class="fas fa-phone me-2"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope me-2"></i> info@binova.com</p>
+            </address>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3 border-top"
+        >
+          <p class="mb-2 mb-md-0">© 2019 Vinovathemes. All rights reserved.</p>
+          <img
+            src="//binova-vinovatheme.myshopify.com/cdn/shop/files/payment-footer_300x.png?v=1613790433"
+            alt="Payment Methods"
+            style="max-height: 30px"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Toastify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Custom JS -->
+    <script src="./asset/js/register.js"></script>
+  </body>
 </html>
