@@ -25,6 +25,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <!-- GLightbox CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- MY CSS -->
     <link rel="stylesheet" href="./asset/css/main.css" />
@@ -58,11 +68,11 @@
                   role="button"
                   data-bs-toggle="dropdown"
                 >
-                  ALL DEMOS
+                  Product
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Demo 1</a></li>
-                  <li><a class="dropdown-item" href="#">Demo 2</a></li>
+                  <li><a class="dropdown-item" href="#">NIKE</a></li>
+                  <li><a class="dropdown-item" href="#">ADIDAS</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -88,7 +98,10 @@
                 >
                   CATEGORIES
                 </a>
-                <ul class="dropdown-menu">
+                <ul
+                  class="dropdown-menu dropdown-menu-lg-end"
+                  aria-labelledby="userDropdown"
+                >
                   <li><a class="dropdown-item" href="#">Skiing</a></li>
                   <li><a class="dropdown-item" href="#">Hiking</a></li>
                 </ul>
@@ -109,13 +122,42 @@
               </li>
             </ul>
             <div class="header-icons">
-              <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
-              <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
+              <a href="#" id="searchToggle" class="icon-link"
+                ><i class="fas fa-search"></i
+              ></a>
+
               <a href="#" class="cart-icon">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="cart-count">0</span>
                 <span class="cart-text">MY CART</span>
               </a>
+              <!-- User dropdown -->
+              <div class="dropdown user-dropdown">
+                <a
+                  href="#"
+                  class="icon-link dropdown-toggle"
+                  id="userDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user"></i>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="userDropdown"
+                >
+                  <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
+                  <li><a class="dropdown-item" href="#">Đăng ký</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-bar" id="searchBar">
+              <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              <button type="button" id="closeSearch">
+                <i class="fas fa-times text-white"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -139,7 +181,7 @@
             />
             <div class="carousel-caption text-start">
               <h2 class="text-white animate__animated animate__fadeInLeft">
-                The <span>Shoe</span> That Adapts to You
+                The <span class="span-slide1">Shoe</span> That Adapts to You
               </h2>
               <p
                 class="text-white-50 fs-1 animate__animated animate__fadeInRight"
@@ -158,10 +200,10 @@
             />
             <div class="carousel-caption text-start">
               <h2 class="text-white animate__animated animate__zoomIn">
-                The <span>Shoe</span> That Adapts to You
+                The <span class="span-slide2">Shoe</span> That Adapts to You
               </h2>
               <p class="text-white-50 fs-1 animate__animated animate__zoomIn">
-                Street Style
+                street style
               </p>
             </div>
           </div>
@@ -175,7 +217,7 @@
             />
             <div class="carousel-caption text-start">
               <h2 class="text-white animate__animated animate__fadeInUp">
-                The <span>Shoe</span> That Adapts to You
+                The <span class="span-slide3">Shoe</span> That Adapts to You
               </h2>
               <p
                 class="text-white-50 fs-1 animate__animated animate__fadeInDown"
@@ -227,124 +269,764 @@
       </div>
     </section>
 
-    <!-- Featured Products Section -->
-    <section class="featured-products py-5">
+    <!-- Product -->
+    <section class="py-5">
       <div class="container">
-        <h2 class="section-title text-center mb-5">FEATURED PRODUCTS</h2>
-        <div class="row">
-          <!-- Product 1 -->
-          <div class="col-md-4 mb-4">
-            <div class="product-card">
-              <div class="product-image">
+        <div class="row g-4 text-center">
+          <!-- Image 1 -->
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="gallery-item">
+              <a href="#">
                 <img
-                  src="https://cdn2.cellphones.com.vn/x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-m55_2.png"
-                  alt="Product Image"
-                  class="img-fluid"
+                  src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/banner-1_1920x1920.jpg?v=1613790420"
+                  class="img-fluid rounded"
+                  alt="Gallery Image 1"
                 />
-                <div class="product-overlay">
-                  <a href="#" class="btn btn-sm btn-dark">Quick View</a>
-                  <a href="#" class="btn btn-sm btn-dark">Add to Cart</a>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3 class="product-title">Alpine Ski Boots</h3>
-                <p class="product-price">$299.99</p>
-              </div>
+              </a>
             </div>
           </div>
-          <!-- Product 2 -->
-          <div class="col-md-4 mb-4">
-            <div class="product-card">
-              <div class="product-image">
+
+          <!-- Image 2 -->
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="gallery-item">
+              <a href="#">
                 <img
-                  src="https://cdn2.cellphones.com.vn/x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-m55_2.png"
-                  alt="Product Image"
-                  class="img-fluid"
+                  src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/banner-2_1920x1920.jpg?v=1613790420"
+                  class="img-fluid rounded"
+                  alt="Gallery Image 2"
                 />
-                <div class="product-overlay">
-                  <a href="#" class="btn btn-sm btn-dark">Quick View</a>
-                  <a href="#" class="btn btn-sm btn-dark">Add to Cart</a>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3 class="product-title">Touring Skis</h3>
-                <p class="product-price">$449.99</p>
-              </div>
+              </a>
             </div>
           </div>
-          <!-- Product 3 -->
-          <div class="col-md-4 mb-4">
-            <div class="product-card">
-              <div class="product-image">
+
+          <!-- Image 3 -->
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="gallery-item">
+              <a href="#">
                 <img
-                  src="https://cdn2.cellphones.com.vn/x/media/catalog/product/d/i/dien-thoai-samsung-galaxy-m55_2.png"
-                  alt="Product Image"
-                  class="img-fluid"
+                  src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/banner-3_4ce14465-02c3-4886-9310-0dfc69643764_1920x1920.jpg?v=1613790711"
+                  class="img-fluid rounded"
+                  alt="Gallery Image 3"
                 />
-                <div class="product-overlay">
-                  <a href="#" class="btn btn-sm btn-dark">Quick View</a>
-                  <a href="#" class="btn btn-sm btn-dark">Add to Cart</a>
-                </div>
-              </div>
-              <div class="product-info">
-                <h3 class="product-title">Winter Jacket</h3>
-                <p class="product-price">$199.99</p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Newsletter Modal -->
-    <div
-      class="modal fade"
-      id="newsletterModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body p-0">
-            <div class="newsletter-container">
-              <div class="row g-0">
-                <div class="col-md-5">
-                  <div class="newsletter-image">
+    <!-- Products -->
+    <div class="container py-5">
+      <div class="top-title">
+        <div class="sub-title">The Best Products Of Catalan</div>
+        <h4 class="title-block title-font">
+          <span class="title-text">Feature Products</span>
+        </h4>
+      </div>
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-md-3 h-100">
+          <div class="product-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/products/3_a_425x.jpg?v=1592962836"
+                  alt="product thumb"
+                />
+              </a>
+              <div class="button-group">
+                <a
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  aria-label="Add to Wishlist"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_view"
+                  aria-label="Quick View"
+                  ><i class="fa fa-eye"></i
+                ></a>
+              </div>
+              <div class="product-label">
+                <span>new</span>
+              </div>
+              <div class="discount-label">
+                <span>-10%</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <div class="product-caption">
+                <h6 class="product-name">
+                  <a href="product-details.html">Quickiin Mens shoes</a>
+                </h6>
+                <div class="price-box">
+                  <span class="price-old">$90.00</span>
+                  <span class="price-regular">$70.00</span>
+                </div>
+                <a class="add-to-cart" href="cart.html"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </div>
+              <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 h-100">
+          <div class="product-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/products/3_a_425x.jpg?v=1592962836"
+                  alt="product thumb"
+                />
+              </a>
+              <div class="button-group">
+                <a
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  aria-label="Add to Wishlist"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_view"
+                  aria-label="Quick View"
+                  ><i class="fa fa-eye"></i
+                ></a>
+              </div>
+              <div class="product-label">
+                <span>new</span>
+              </div>
+              <div class="discount-label">
+                <span>-10%</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <div class="product-caption">
+                <h6 class="product-name">
+                  <a href="product-details.html">Quickiin Mens shoes</a>
+                </h6>
+                <div class="price-box">
+                  <span class="price-old">$90.00</span>
+                  <span class="price-regular">$70.00</span>
+                </div>
+                <a class="add-to-cart" href="cart.html"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </div>
+              <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 h-100">
+          <div class="product-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/products/3_a_425x.jpg?v=1592962836"
+                  alt="product thumb"
+                />
+              </a>
+              <div class="button-group">
+                <a
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  aria-label="Add to Wishlist"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_view"
+                  aria-label="Quick View"
+                  ><i class="fa fa-eye"></i
+                ></a>
+              </div>
+              <div class="product-label">
+                <span>new</span>
+              </div>
+              <div class="discount-label">
+                <span>-10%</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <div class="product-caption">
+                <h6 class="product-name">
+                  <a href="product-details.html">Quickiin Mens shoes</a>
+                </h6>
+                <div class="price-box">
+                  <span class="price-old">$90.00</span>
+                  <span class="price-regular">$70.00</span>
+                </div>
+                <a class="add-to-cart" href="cart.html"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </div>
+              <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 h-100">
+          <div class="product-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/products/3_a_425x.jpg?v=1592962836"
+                  alt="product thumb"
+                />
+              </a>
+              <div class="button-group">
+                <a
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  aria-label="Add to Wishlist"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_view"
+                  aria-label="Quick View"
+                  ><i class="fa fa-eye"></i
+                ></a>
+              </div>
+              <div class="product-label">
+                <span>new</span>
+              </div>
+              <div class="discount-label">
+                <span>-10%</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <div class="product-caption">
+                <h6 class="product-name">
+                  <a href="product-details.html">Quickiin Mens shoes</a>
+                </h6>
+                <div class="price-box">
+                  <span class="price-old">$90.00</span>
+                  <span class="price-regular">$70.00</span>
+                </div>
+                <a class="add-to-cart" href="cart.html"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </div>
+              <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 h-100">
+          <div class="product-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/products/3_a_425x.jpg?v=1592962836"
+                  alt="product thumb"
+                />
+              </a>
+              <div class="button-group">
+                <a
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  aria-label="Add to Wishlist"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_view"
+                  aria-label="Quick View"
+                  ><i class="fa fa-eye"></i
+                ></a>
+              </div>
+              <div class="product-label">
+                <span>new</span>
+              </div>
+              <div class="discount-label">
+                <span>-10%</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <div class="product-caption">
+                <h6 class="product-name">
+                  <a href="product-details.html">Quickiin Mens shoes</a>
+                </h6>
+                <div class="price-box">
+                  <span class="price-old">$90.00</span>
+                  <span class="price-regular">$70.00</span>
+                </div>
+                <a class="add-to-cart" href="cart.html"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </div>
+              <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 h-100">
+          <div class="product-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/products/3_a_425x.jpg?v=1592962836"
+                  alt="product thumb"
+                />
+              </a>
+              <div class="button-group">
+                <a
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  aria-label="Add to Wishlist"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_view"
+                  aria-label="Quick View"
+                  ><i class="fa fa-eye"></i
+                ></a>
+              </div>
+              <div class="product-label">
+                <span>new</span>
+              </div>
+              <div class="discount-label">
+                <span>-10%</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <div class="product-caption">
+                <h6 class="product-name">
+                  <a href="product-details.html">Quickiin Mens shoes</a>
+                </h6>
+                <div class="price-box">
+                  <span class="price-old">$90.00</span>
+                  <span class="price-regular">$70.00</span>
+                </div>
+                <a class="add-to-cart" href="cart.html"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </div>
+              <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 h-100">
+          <div class="product-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/products/3_a_425x.jpg?v=1592962836"
+                  alt="product thumb"
+                />
+              </a>
+              <div class="button-group">
+                <a
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  aria-label="Add to Wishlist"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_view"
+                  aria-label="Quick View"
+                  ><i class="fa fa-eye"></i
+                ></a>
+              </div>
+              <div class="product-label">
+                <span>new</span>
+              </div>
+              <div class="discount-label">
+                <span>-10%</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <div class="product-caption">
+                <h6 class="product-name">
+                  <a href="product-details.html">Quickiin Mens shoes</a>
+                </h6>
+                <div class="price-box">
+                  <span class="price-old">$90.00</span>
+                  <span class="price-regular">$70.00</span>
+                </div>
+                <a class="add-to-cart" href="cart.html"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </div>
+              <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 h-100">
+          <div class="product-item">
+            <div class="product-thumb">
+              <a href="#">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/products/3_a_425x.jpg?v=1592962836"
+                  alt="product thumb"
+                />
+              </a>
+              <div class="button-group">
+                <a
+                  href="#"
+                  data-bs-toggle="tooltip"
+                  aria-label="Add to Wishlist"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#quick_view"
+                  aria-label="Quick View"
+                  ><i class="fa fa-eye"></i
+                ></a>
+              </div>
+              <div class="product-label">
+                <span>new</span>
+              </div>
+              <div class="discount-label">
+                <span>-10%</span>
+              </div>
+            </div>
+            <div class="product-content">
+              <div class="product-caption">
+                <h6 class="product-name">
+                  <a href="product-details.html">Quickiin Mens shoes</a>
+                </h6>
+                <div class="price-box">
+                  <span class="price-old">$90.00</span>
+                  <span class="price-regular">$70.00</span>
+                </div>
+                <a class="add-to-cart" href="cart.html"
+                  ><i class="fa fa-shopping-cart"></i
+                ></a>
+              </div>
+              <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Section Shopify -->
+    <div class="another-banner-area my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-0">
+            <div class="big-banner">
+              <a href="#">
+                <img
+                  src="https://htmldemo.net/james/james/img/banner/banner-10.jpg"
+                  alt="Banner"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ICON -->
+    <section class="pt-5">
+      <div class="container">
+        <div class="row text-center">
+          <!-- Item -->
+          <div class="col-lg-4 col-md-6 mb-5 position-relative">
+            <div class="policy-card p-4 border-dashed rounded h-100 pt-5">
+              <div class="policy-icon-wrapper">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/files/icon_policy-1_100x.png?v=1613790421"
+                  alt="Express Shipping"
+                  class="img-fluid"
+                />
+              </div>
+              <h5 class="fw-bold text-dark mt-3">Express Shipping</h5>
+              <p class="text-muted small">
+                Lorem ipsum dolor sit amet consecte adipiscing elit pellentesque
+              </p>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col-lg-4 col-md-6 mb-5 position-relative">
+            <div class="policy-card p-4 border-dashed rounded h-100 pt-5">
+              <div class="policy-icon-wrapper">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/files/icon_policy-2_100x.png?v=1613790422"
+                  alt="Payment Secured"
+                  class="img-fluid"
+                />
+              </div>
+              <h5 class="fw-bold text-dark mt-3">Payment Secured</h5>
+              <p class="text-muted small">
+                Lorem ipsum dolor sit amet consecte adipiscing elit pellentesque
+              </p>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="col-lg-4 col-md-6 mb-5 position-relative">
+            <div class="policy-card p-4 border-dashed rounded h-100 pt-5">
+              <div class="policy-icon-wrapper">
+                <img
+                  src="//binova-vinovatheme.myshopify.com/cdn/shop/files/icon_policy-3_100x.png?v=1613790422"
+                  alt="Money Back Guarantee"
+                  class="img-fluid"
+                />
+              </div>
+              <h5 class="fw-bold text-dark mt-3">Money Back Guarantee</h5>
+              <p class="text-muted small">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit
+                pellentesque
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Post -->
+    <section class="container py-5">
+      <div class="align-items-start">
+        <!-- Left Column -->
+        <div class="blog-post-left">
+          <p
+            class="text-uppercase text-muted fw-bold mb-1"
+            style="opacity: 0.6"
+          >
+            Latest
+          </p>
+          <h1 class="display-4 fw-bold text-dark mb-0">BLOG POST</h1>
+        </div>
+
+        <!-- Right Column -->
+        <div class="blog-post-right">
+          <p class="text-muted">
+            Nam maximus, purus quis tincidunt semper, felis tellus molestie
+            nulla in finibus erat magna et tortor. Phasellus a magna lobortis.
+          </p>
+        </div>
+      </div>
+
+      <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row">
+              <!-- Blog Card 1 -->
+              <div class="col-md-6 mb-4">
+                <div
+                  class="card border-0 shadow-sm text-white overflow-hidden position-relative zoom-hover"
+                >
+                  <div class="position-relative">
                     <img
-                      src="https://via.placeholder.com/300x400"
-                      alt="Orange Shoes"
-                      class="img-fluid"
+                      src="//binova-vinovatheme.myshopify.com/cdn/shop/articles/blog-1_570x.jpg?v=1592887054"
+                      class="card-img card-img-zoom"
+                      alt="Blog 1"
                     />
+                    <div
+                      class="position-absolute top-0 start-0 w-100 h-100 overlay-dark"
+                    ></div>
+                    <div
+                      class="bg-green position-absolute top-0 start-0 bg-opacity-75 text-white px-3 py-2 rounded-end m-2"
+                    >
+                      <div class="h5 mb-0">25</div>
+                      <small>Jun</small>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 p-4 w-100">
+                      <div class="text-start">
+                        <h5 class="fw-bold color-green">
+                          Lorem ipsum dolor sit amet consectetuer adipiscing
+                        </h5>
+                        <p class="mb-2 text-white-50">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry...
+                        </p>
+                      </div>
+
+                      <div class="text-center mt-3">
+                        <a href="#" class="btn bg-green1 text-white">
+                          Read more
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-7">
-                  <div class="newsletter-content p-4">
-                    <h3 class="newsletter-title">SIGN UP TO NEWSLETTER</h3>
-                    <p class="newsletter-text">
-                      Receive email-only deals, special offers & product
-                      exclusives
-                    </p>
-                    <form class="newsletter-form mt-4">
-                      <div class="mb-3">
-                        <input
-                          type="email"
-                          class="form-control"
-                          placeholder="ENTER YOUR EMAIL..."
-                        />
+              </div>
+
+              <!-- Blog Card 2 -->
+              <div class="col-md-6 mb-4">
+                <div
+                  class="card border-0 shadow-sm text-white overflow-hidden position-relative zoom-hover"
+                >
+                  <div class="position-relative">
+                    <img
+                      src="//binova-vinovatheme.myshopify.com/cdn/shop/articles/blog-2_570x.jpg?v=1592894144"
+                      class="card-img card-img-zoom"
+                      alt="Blog 2"
+                    />
+                    <div
+                      class="position-absolute top-0 start-0 w-100 h-100 overlay-dark"
+                    ></div>
+                    <div
+                      class="bg-green position-absolute top-0 start-0 bg-opacity-75 text-white px-3 py-2 rounded-end m-2"
+                    >
+                      <div class="h5 mb-0">23</div>
+                      <small>Jun</small>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 p-4 w-100">
+                      <div class="text-start">
+                        <h5 class="fw-bold color-green">
+                          Lorem ipsum dolor sit amet consectetuer adipiscing
+                        </h5>
+                        <p class="mb-2 text-white-50">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry...
+                        </p>
                       </div>
-                      <button type="submit" class="btn btn-dark w-100">
-                        SUBSCRIBE
-                      </button>
-                    </form>
-                    <div class="form-check mt-3">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="dontShowAgain"
-                      />
-                      <label class="form-check-label" for="dontShowAgain">
-                        DON'T SHOW THIS POPUP AGAIN
-                      </label>
+
+                      <div class="text-center mt-3">
+                        <a href="#" class="btn bg-green1 text-white">
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row">
+              <!-- Blog Card 3 -->
+              <div class="col-md-6 mb-4">
+                <div
+                  class="card border-0 shadow-sm text-white overflow-hidden position-relative zoom-hover"
+                >
+                  <div class="position-relative">
+                    <img
+                      src="//binova-vinovatheme.myshopify.com/cdn/shop/articles/blog-3_570x.jpg?v=1592905411"
+                      class="card-img card-img-zoom"
+                      alt="Blog 3"
+                    />
+                    <div
+                      class="position-absolute top-0 start-0 w-100 h-100 overlay-dark"
+                    ></div>
+                    <div
+                      class="bg-green position-absolute top-0 start-0 bg-opacity-75 text-white px-3 py-2 rounded-end m-2"
+                    >
+                      <div class="h5 mb-0">23</div>
+                      <small>Jun</small>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 p-4 w-100">
+                      <div class="text-start">
+                        <h5 class="fw-bold color-green">
+                          Lorem ipsum dolor sit amet consectetuer adipiscing
+                        </h5>
+                        <p class="mb-2 text-white-50">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry...
+                        </p>
+                      </div>
+
+                      <div class="text-center mt-3">
+                        <a href="#" class="btn bg-green1 text-white">
+                          Read more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div
+                  class="card border-0 shadow-sm text-white overflow-hidden position-relative zoom-hover"
+                >
+                  <div class="position-relative">
+                    <img
+                      src="./asset/img/shoes-product.png"
+                      class="card-img card-img-zoom"
+                      alt="Blog 3"
+                    />
+                    <div
+                      class="position-absolute top-0 start-0 w-100 h-100 overlay-dark"
+                    ></div>
+                    <div
+                      class="bg-green position-absolute top-0 start-0 bg-opacity-75 text-white px-3 py-2 rounded-end m-2"
+                    >
+                      <div class="h5 mb-0">23</div>
+                      <small>Jun</small>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 p-4 w-100">
+                      <div class="text-start">
+                        <h5 class="fw-bold color-green">
+                          Lorem ipsum dolor sit amet consectetuer adipiscing
+                        </h5>
+                        <p class="mb-2 text-white-50">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry...
+                        </p>
+                      </div>
+
+                      <div class="text-center mt-3">
+                        <a href="#" class="btn bg-green1 text-white">
+                          Read more
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -352,18 +1034,350 @@
             </div>
           </div>
         </div>
+
+        <!-- Carousel Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#blogCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#blogCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
-    </div>
+    </section>
+
+    <!-- ICON LOGO -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-0 text-center">
+          <!-- Brand Item -->
+          <div
+            class="col d-flex align-items-center justify-content-center py-3"
+          >
+            <a href="#" class="brand-item">
+              <img
+                src="//binova-vinovatheme.myshopify.com/cdn/shop/files/brands_1_104x110@2x.jpg?v=1613790423"
+                class="img-fluid"
+                alt="Brand 1"
+              />
+            </a>
+          </div>
+          <!-- Brand Item -->
+          <div
+            class="col d-flex align-items-center justify-content-center py-3"
+          >
+            <a href="#" class="brand-item">
+              <img
+                src="//binova-vinovatheme.myshopify.com/cdn/shop/files/brands_2_104x110@2x.jpg?v=1613790423"
+                class="img-fluid"
+                alt="Brand 2"
+              />
+            </a>
+          </div>
+          <!-- Brand Item -->
+          <div
+            class="col d-flex align-items-center justify-content-center py-3"
+          >
+            <a href="#" class="brand-item">
+              <img
+                src="//binova-vinovatheme.myshopify.com/cdn/shop/files/brands_3_104x110@2x.jpg?v=1613790423"
+                class="img-fluid"
+                alt="Brand 3"
+              />
+            </a>
+          </div>
+          <!-- Brand Item -->
+          <div
+            class="col d-flex align-items-center justify-content-center py-3"
+          >
+            <a href="#" class="brand-item">
+              <img
+                src="//binova-vinovatheme.myshopify.com/cdn/shop/files/brands_4_104x110@2x.jpg?v=1613790423"
+                class="img-fluid"
+                alt="Brand 4"
+              />
+            </a>
+          </div>
+          <!-- Brand Item -->
+          <div
+            class="col d-flex align-items-center justify-content-center py-3"
+          >
+            <a href="#" class="brand-item">
+              <img
+                src="//binova-vinovatheme.myshopify.com/cdn/shop/files/brands_5_104x110@2x.jpg?v=1613790423"
+                class="img-fluid"
+                alt="Brand 5"
+              />
+            </a>
+          </div>
+          <!-- Brand Item -->
+          <div
+            class="col d-flex align-items-center justify-content-center py-3"
+          >
+            <a href="#" class="brand-item">
+              <img
+                src="//binova-vinovatheme.myshopify.com/cdn/shop/files/brands_6_104x110@2x.jpg?v=1613790423"
+                class="img-fluid"
+                alt="Brand 6"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Product List -->
+    <section class="container-fluid py-5 gallery bg-light">
+      <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row gx-3 gy-3 px-3">
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-1_f16118b3-c2dd-4179-bb69-38772c464ec5.jpg?v=1614290730"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-1_f16118b3-c2dd-4179-bb69-38772c464ec5_300x300.jpg?v=1614290730"
+                    class="img-fluid rounded"
+                    alt="Gallery Image"
+                  />
+                </a>
+              </div>
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-2_173a7141-c092-4c2e-8db0-9605080d4fc3.jpg?v=1614290730"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-2_173a7141-c092-4c2e-8db0-9605080d4fc3_300x300.jpg?v=1614290730"
+                    class="img-fluid rounded"
+                    alt="Gallery Image"
+                  />
+                </a>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-3_60e8ff71-b5ba-4857-93aa-48c0bbc1d043.jpg?v=1614290730"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-3_60e8ff71-b5ba-4857-93aa-48c0bbc1d043_300x300.jpg?v=1614290730"
+                    class="img-fluid rounded"
+                    alt="Gallery Image"
+                  />
+                </a>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-4_d44b052e-3e7d-4c57-932f-2f8de4651057.jpg?v=1614290730"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-4_d44b052e-3e7d-4c57-932f-2f8de4651057_300x300.jpg?v=1614290730"
+                    class="img-fluid rounded"
+                    alt="Gallery Image"
+                  />
+                </a>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-5_83fc12db-164a-4a31-b48e-e5c57db0d6ef.jpg?v=1614290731"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-5_83fc12db-164a-4a31-b48e-e5c57db0d6ef_300x300.jpg?v=1614290731"
+                    class="img-fluid rounded"
+                    alt="Gallery Image"
+                  />
+                </a>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-6_aeb60c41-7dc1-416f-aa1b-c1238cb0e1b7.jpg?v=1614290731"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-6_aeb60c41-7dc1-416f-aa1b-c1238cb0e1b7_300x300.jpg?v=1614290731"
+                    class="img-fluid rounded"
+                    alt="Gallery Image"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row gx-3 gy-3 px-3">
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-7_2ccc81b6-4461-44b3-bd44-ad96b9e86990.jpg?v=1614291095"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-7_2ccc81b6-4461-44b3-bd44-ad96b9e86990_300x300.jpg?v=1614291095"
+                    class="img-fluid rounded"
+                    alt="Gallery Image"
+                  />
+                </a>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-8_01a673f5-e383-4bee-ab48-b68ac5b37e33.jpg?v=1614291095"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-8_01a673f5-e383-4bee-ab48-b68ac5b37e33_300x300.jpg?v=1614291095"
+                    class="img-fluid rounded"
+                    alt="Gallery Image"
+                  />
+                </a>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-9_2322e7b0-2cf8-4334-9f64-df93fa45e877.jpg?v=1614291096"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="https://binova-vinovatheme.myshopify.com/cdn/shop/files/gallery-9_2322e7b0-2cf8-4334-9f64-df93fa45e877_300x300.jpg?v=1614291096"
+                    class="img-fluid rounded"
+                    alt="Gallery Image"
+                  />
+                </a>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="./asset/img/shoes-product1.png"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="./asset/img/shoes-product1.png"
+                    class="img-fluid rounded"
+                    alt="Placeholder"
+                  />
+                </a>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="./asset/img/shoes-product2.png"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="./asset/img/shoes-product2.png"
+                    class="img-fluid rounded"
+                    alt="Placeholder"
+                  />
+                </a>
+              </div>
+
+              <div class="col-6 col-sm-4 col-md-2">
+                <a
+                  href="./asset/img/shoes-product3.png"
+                  class="glightbox"
+                  data-gallery="main-gallery"
+                >
+                  <img
+                    src="./asset/img/shoes-product3.png"
+                    class="img-fluid rounded"
+                    alt="Placeholder"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#galleryCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#galleryCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="site-footer py-5">
       <div class="container">
-        <div class="row">
+        <!-- Newsletter Section -->
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-12">
+            <h5 class="text-white">Newsletter</h5>
+            <p class="color-green">
+              Sign up for newsletter to receive special offers and exclusive
+              news about Binova products
+            </p>
+          </div>
+          <div class="col-md-8">
+            <form action="/contact#contact_form" method="post" class="row g-2">
+              <input type="hidden" name="form_type" value="customer" />
+              <input type="hidden" name="utf8" value="✓" />
+              <input type="hidden" name="contact[tags]" value="newsletter" />
+              <div class="col-md-9">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="col-md-3">
+                <button type="submit" class="btn bg-green1 w-100 text-white">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row border-top pt-4">
           <div class="col-lg-3 col-md-6 mb-4">
             <h5 class="footer-heading">ABOUT US</h5>
             <p>
-              Binova is a premium outdoor gear shop specializing in high-quality
-              equipment for skiing, hiking, and outdoor adventures.
+              <span class="color-green">Binova</span> is a premium outdoor gear
+              shop specializing in high-quality equipment for skiing, hiking,
+              and outdoor adventures.
             </p>
           </div>
           <div class="col-lg-3 col-md-6 mb-4">
@@ -402,10 +1416,16 @@
             </div>
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-12 text-center">
-            <p class="copyright">© 2023 Binova. All Rights Reserved.</p>
-          </div>
+        <!-- Footer Bottom -->
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3 border-top"
+        >
+          <p class="mb-2 mb-md-0">© 2019 Vinovathemes. All rights reserved.</p>
+          <img
+            src="//binova-vinovatheme.myshopify.com/cdn/shop/files/payment-footer_300x.png?v=1613790433"
+            alt="Payment Methods"
+            style="max-height: 30px"
+          />
         </div>
       </div>
     </footer>
@@ -421,6 +1441,8 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
       $(document).ready(function () {
@@ -433,7 +1455,58 @@
         });
       });
     </script>
+    <script>
+      const lightbox = GLightbox({
+        selector: ".glightbox",
+        touchNavigation: true,
+        loop: true,
+        zoomable: true,
+      });
+    </script>
+    <script>
+      // Initialize Bootstrap tooltips
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+    <script>
+      const searchToggle = document.getElementById("searchToggle");
+      const searchBar = document.getElementById("searchBar");
+      const closeSearch = document.getElementById("closeSearch");
 
+      searchToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        searchBar.classList.toggle("active");
+      });
+
+      closeSearch.addEventListener("click", () => {
+        searchBar.classList.remove("active");
+      });
+
+      // Optional: Ấn ESC để đóng thanh search
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          searchBar.classList.remove("active");
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const heartIcons = document.querySelectorAll(
+          ".button-group a .fa-heart"
+        );
+
+        heartIcons.forEach((icon) => {
+          icon.parentElement.addEventListener("click", function (e) {
+            e.preventDefault();
+            icon.classList.toggle("active");
+          });
+        });
+      });
+    </script>
     <!-- Custom JS -->
     <script src="./asset/js/main.js"></script>
   </body>

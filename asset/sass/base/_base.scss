@@ -1,5 +1,7 @@
 @use "../abstracts/variables";
-
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: variables.$font-primary;
   color: $secondary-color;
@@ -26,4 +28,10 @@ a {
   &:hover {
     color: $accent-color;
   }
+}
+.color-green {
+  color: $accent-color;
+}
+.bg-green {
+  background-color: $accent-color;
 }
