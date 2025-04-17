@@ -105,24 +105,25 @@ a:hover {
 
 .user-dropdown .dropdown-menu {
   min-width: 150px;
-  left: 0px;
 }
 
 .dropdown-menu {
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid #8cc32e;
   left: 0px;
   min-width: 150px;
+  transition: all 0.3s;
 }
 .dropdown-menu .dropdown-item {
-  color: white;
+  color: #8cc32e;
+  transition: all 0.5s;
 }
 .dropdown-menu .dropdown-item:hover {
   color: white;
   background-color: #8cc32e;
 }
 .dropdown-menu hr.dropdown-divider {
-  border-color: #444;
+  border-color: #8cc32e;
 }
 
 /* CSS cho thanh search */
@@ -171,7 +172,7 @@ a:hover {
 @media (max-width: 820px) {
   .dropdown-menu {
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid #8cc32e;
     min-width: 150px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
@@ -1129,7 +1130,7 @@ a:hover {
   }
 }
 .product-detail {
-  padding: 2rem 0;
+  padding: 3rem 0;
   position: relative;
 }
 .product-detail .loading-overlay {

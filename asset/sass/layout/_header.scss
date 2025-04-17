@@ -68,20 +68,19 @@
 
 .user-dropdown {
   .dropdown-menu {
-    // left: 0px;
     min-width: 150px;
-
-    left: 0px;
   }
 }
 .dropdown-menu {
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid $accent-color;
   left: 0px;
   min-width: 150px;
+  transition: all 0.3s;
 
   .dropdown-item {
-    color: white;
+    color: $accent-color;
+    transition: all 0.5s;
 
     &:hover {
       color: white;
@@ -90,7 +89,7 @@
   }
 
   hr.dropdown-divider {
-    border-color: #444;
+    border-color: $accent-color;
   }
 }
 /* CSS cho thanh search */
@@ -139,8 +138,8 @@
 @media (max-width: 820px) {
   .dropdown-menu {
     background-color: white;
-    border: 1px solid black;
-    // left: 0px;
+    border: 1px solid $accent-color;
+
     min-width: 150px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 

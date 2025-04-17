@@ -525,4 +525,17 @@ const renderRelatedProducts = (products) => {
   }
 
   relatedProductsContainer.innerHTML = content;
+  // Thêm event listener cho icon con mắt
+  document.querySelectorAll(".quick-view-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const id = this.getAttribute("data-id");
+      const product = products.find((p) => p.id == id);
+
+      if (product) {
+        document.getElementById("modalProductImage").src = product.image;
+        document.getElementById("modalProductName").textContent = product.name;
+        document.getElementById("modalProductName").style.color = "black";
+      }
+    });
+  });
 };
