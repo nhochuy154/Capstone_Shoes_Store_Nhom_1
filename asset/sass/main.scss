@@ -1,53 +1,22 @@
 // 1. Abstracts: biến, mixin, function
 @import "abstracts/variables";
 @import "abstracts/mixins";
-<<<<<<< Updated upstream
-@import "abstracts/functions";
 
 // 2. Base: reset, base style, font
-@import "base/reset";
-@import "base/typography";
-=======
-// @import "abstracts/functions";
 
-// 2. Base: reset, base style, font
-// @import "base/reset";
-// @import "base/typography";
->>>>>>> Stashed changes
 @import "base/base";
 
 // 3. Layouts: header, footer, grid, v.v.
 @import "layout/header";
 @import "layout/footer";
-<<<<<<< Updated upstream
-@import "layout/grid";
-@import "layout/sidebar";
 
 // 4. Components: button, card, navbar
 @import "components/button";
-@import "components/card";
-@import "components/navbar";
 
 // 5. Pages
 @import "pages/home";
-@import "pages/about";
+@import "pages/register";
 
 // 6. Themes & Vendors
 @import "themes/theme";
-=======
-// @import "layout/grid";
-// @import "layout/sidebar";
-
-// 4. Components: button, card, navbar
-@import "components/button";
-// @import "components/card";
-// @import "components/navbar";
-
-// 5. Pages
-@import "pages/home";
-// @import "pages/about";
-@import "pages/register";
-// 6. Themes & Vendors
-// @import "themes/theme";
->>>>>>> Stashed changes
 @import "vendors/bootstrap";
