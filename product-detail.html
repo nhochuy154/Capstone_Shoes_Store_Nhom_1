@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product Detail - Modern Shoes Store</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- GLightbox CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <!-- Toastify CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./asset/css/main.css" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img src="./asset/img/logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">HOME</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Product
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">NIKE</a></li>
+                  <li><a class="dropdown-item" href="#">ADIDAS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  PAGES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  CATEGORIES
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-lg-end"
+                  aria-labelledby="userDropdown"
+                >
+                  <li><a class="dropdown-item" href="#">Skiing</a></li>
+                  <li><a class="dropdown-item" href="#">Hiking</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  BLOG
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Latest News</a></li>
+                  <li><a class="dropdown-item" href="#">Articles</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="header-icons">
+              <a href="#" id="searchToggle" class="icon-link"
+                ><i class="fas fa-search"></i
+              ></a>
+
+              <a href="#" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+                <span class="cart-text">MY CART</span>
+              </a>
+              <!-- User dropdown -->
+              <div class="dropdown user-dropdown">
+                <a
+                  href="#"
+                  class="icon-link dropdown-toggle"
+                  id="userDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user"></i>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="userDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="/register.html">Đăng nhập</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/register.html">Đăng ký</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-bar" id="searchBar">
+              <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              <button type="button" id="closeSearch">
+                <i class="fas fa-times text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Main Content -->
+    <main class="product-detail">
+      <div class="container">
+        <div class="product-detail__content">
+          <div class="product-detail__gallery">
+            <div class="product-detail__main-image">
+              <img src="asset/img/shoes-product.png" alt="Product Image" />
+            </div>
+            <div class="product-detail__thumbnails">
+              <img src="asset/img/shoes-product1.png" alt="Thumbnail 1" />
+              <img src="asset/img/shoes-product2.png" alt="Thumbnail 2" />
+              <img src="asset/img/shoes-product3.png" alt="Thumbnail 3" />
+            </div>
+          </div>
+
+          <div class="product-detail__info">
+            <h1 class="product-detail__title">Loading...</h1>
+
+            <div class="product-detail__rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="review-count">(128 reviews)</span>
+            </div>
+
+            <div class="product-detail__price">
+              <span class="current-price">$0.00</span>
+              <span class="old-price">$0.00</span>
+              <span class="discount">-0%</span>
+            </div>
+
+            <div class="product-detail__availability">
+              <span class="availability-label">Available:</span>
+              <span class="stock"
+                ><i class="fas fa-check-circle"></i> Loading...</span
+              >
+              <span class="sku"
+                ><i class="fas fa-barcode"></i> SKU: Loading...</span
+              >
+            </div>
+
+            <div class="product-detail__description">
+              <p>Loading...</p>
+            </div>
+
+            <div class="product-detail__categories">
+              <span><i class="fas fa-tags"></i> Categories: </span>
+            </div>
+
+            <div class="product-detail__options">
+              <div class="color-options">
+                <label><i class="fas fa-palette"></i> Color:</label>
+                <div class="color-swatches">
+                  <span class="color-swatch blue" title="Blue"></span>
+                  <span class="color-swatch red" title="Red"></span>
+                  <span class="color-swatch white" title="White"></span>
+                  <span class="color-swatch gray" title="Gray"></span>
+                  <span class="color-swatch pink" title="Pink"></span>
+                  <span class="color-swatch black" title="Black"></span>
+                </div>
+              </div>
+
+              <div class="size-options">
+                <label><i class="fas fa-ruler"></i> Size:</label>
+                <div class="size-list">
+                  <!-- Size buttons will be added here dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <div class="product-detail__actions">
+              <div class="quantity-selector">
+                <button class="btn btn-outline-secondary quantity-btn minus">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <input
+                  type="number"
+                  class="form-control text-center"
+                  value="1"
+                  min="1"
+                />
+                <button class="btn btn-outline-secondary quantity-btn plus">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <button class="btn btn-primary btn-lg add-to-cart">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </button>
+              <button class="btn btn-outline-danger btn-lg wishlist-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-detail__tabs">
+          <div class="tabs-header">
+            <button class="tab-btn active" data-tab="description">
+              Description
+            </button>
+            <button class="tab-btn" data-tab="reviews">Reviews</button>
+          </div>
+          <div class="tabs-content">
+            <div class="tab-panel active" id="description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                quis, sem.
+              </p>
+              <p>
+                Nulla consequat massa quis enim. Donec pede justo, fringilla
+                vel, aliquet nec, vulputate eget, arcu. Lorem ipsum dolor sit
+                amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                dolor. Aenean massa.
+              </p>
+            </div>
+            <div class="tab-panel" id="reviews">
+              <div class="reviews-summary">
+                <h3>Customer Reviews</h3>
+                <p>Based on 9 reviews</p>
+                <button class="write-review-btn">Write a review</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="related-products">
+          <h2>Related Products</h2>
+          <div class="related-products__grid">
+            <!-- Related products will be added here -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer py-5">
+      <div class="container">
+        <!-- Newsletter Section -->
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-12">
+            <h5 class="text-white">Newsletter</h5>
+            <p class="color-green">
+              Sign up for newsletter to receive special offers and exclusive
+              news about Binova products
+            </p>
+          </div>
+          <div class="col-md-8">
+            <form action="/contact#contact_form" method="post" class="row g-2">
+              <input type="hidden" name="form_type" value="customer" />
+              <input type="hidden" name="utf8" value="✓" />
+              <input type="hidden" name="contact[tags]" value="newsletter" />
+              <div class="col-md-9">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="col-md-3">
+                <button
+                  style="padding: 12px 0px"
+                  type="submit"
+                  class="btn bg-green1 w-100 text-white"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row border-top pt-4">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">ABOUT US</h5>
+            <p>
+              <span class="color-green">Binova</span> is a premium outdoor gear
+              shop specializing in high-quality equipment for skiing, hiking,
+              and outdoor adventures.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">CATEGORIES</h5>
+            <ul class="footer-links">
+              <li><a href="#">Skiing</a></li>
+              <li><a href="#">Hiking</a></li>
+              <li><a href="#">Camping</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">INFORMATION</h5>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">CONTACT US</h5>
+            <address>
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Mountain Road,
+                Alpine City
+              </p>
+              <p><i class="fas fa-phone me-2"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope me-2"></i> info@binova.com</p>
+            </address>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3 border-top"
+        >
+          <p class="mb-2 mb-md-0">© 2019 Vinovathemes. All rights reserved.</p>
+          <img
+            src="//binova-vinovatheme.myshopify.com/cdn/shop/files/payment-footer_300x.png?v=1613790433"
+            alt="Payment Methods"
+            style="max-height: 30px"
+          />
+        </div>
+      </div>
+    </footer>
+    <div
+      class="modal fade"
+      id="quick_view"
+      tabindex="-1"
+      aria-labelledby="quickViewLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modalProductName" class="modal-title"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Đóng"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="modalProductImage" src="" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Toastify JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script>
+      const searchToggle = document.getElementById("searchToggle");
+      const searchBar = document.getElementById("searchBar");
+      const closeSearch = document.getElementById("closeSearch");
+
+      searchToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        searchBar.classList.toggle("active");
+      });
+
+      closeSearch.addEventListener("click", () => {
+        searchBar.classList.remove("active");
+      });
+
+      // Optional: Ấn ESC để đóng thanh search
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          searchBar.classList.remove("active");
+        }
+      });
+    </script>
+
+    <!-- Custom JS -->
+    <script src="./asset/js/main.js"></script>
+    <script src="./asset/js/product-detail.js"></script>
+  </body>
+</html>

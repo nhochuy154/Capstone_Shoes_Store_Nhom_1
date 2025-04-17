@@ -18,6 +18,7 @@
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      x
       rel="stylesheet"
     />
     <!-- Font Awesome -->
@@ -1438,6 +1439,32 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="modal fade"
+      id="quick_view"
+      tabindex="-1"
+      aria-labelledby="quickViewLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modalProductName" class="modal-title"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Đóng"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="modalProductImage" src="" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -1453,32 +1480,12 @@
     <!-- GLightbox JS -->
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- <script>
-      $(document).ready(function () {
-        $(".main-slider").slick({
-          autoplay: true,
-          autoplaySpeed: 5000,
-          arrows: false,
-          dots: true,
-          fade: false,
-        });
-      });
-    </script> -->
     <script>
       const lightbox = GLightbox({
         selector: ".glightbox",
         touchNavigation: true,
         loop: true,
         zoomable: true,
-      });
-    </script>
-    <script>
-      // Initialize Bootstrap tooltips
-      var tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      );
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
       });
     </script>
     <script>
@@ -1500,20 +1507,6 @@
         if (e.key === "Escape") {
           searchBar.classList.remove("active");
         }
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const heartIcons = document.querySelectorAll(
-          ".button-group a .fa-heart"
-        );
-
-        heartIcons.forEach((icon) => {
-          icon.parentElement.addEventListener("click", function (e) {
-            e.preventDefault();
-            icon.classList.toggle("active");
-          });
-        });
       });
     </script>
     <!-- Axios -->

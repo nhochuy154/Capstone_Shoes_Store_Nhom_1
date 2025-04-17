@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chi Tiết Sản Phẩm</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./asset/css/main.css" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img src="./asset/img/logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">HOME</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Product
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">NIKE</a></li>
+                  <li><a class="dropdown-item" href="#">ADIDAS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  PAGES
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  CATEGORIES
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-lg-end"
+                  aria-labelledby="userDropdown"
+                >
+                  <li><a class="dropdown-item" href="#">Skiing</a></li>
+                  <li><a class="dropdown-item" href="#">Hiking</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  BLOG
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Latest News</a></li>
+                  <li><a class="dropdown-item" href="#">Articles</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="header-icons">
+              <a href="#" id="searchToggle" class="icon-link"
+                ><i class="fas fa-search"></i
+              ></a>
+
+              <a href="#" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+                <span class="cart-text">MY CART</span>
+              </a>
+              <!-- User dropdown -->
+              <div class="dropdown user-dropdown">
+                <a
+                  href="#"
+                  class="icon-link dropdown-toggle"
+                  id="userDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user"></i>
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="userDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="/register.html">Đăng nhập</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/register.html">Đăng ký</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-bar" id="searchBar">
+              <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+              <button type="button" id="closeSearch">
+                <i class="fas fa-times text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="product-detail py-5">
+      <div class="container" id="product-detail">
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="product-image">
+              <img
+                src="#"
+                alt="Blucher shoe"
+                class="img-fluid border rounded"
+                id="productImage"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="product-title mb-4">Blucher shoe</h2>
+
+            <div class="product-info mb-4">
+              <div class="row mb-3">
+                <div class="col-3">
+                  <span class="info-label">Price:</span>
+                </div>
+                <div class="col-9">
+                  <span class="price text-purple">$780.00</span>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-3">
+                  <span class="info-label">Size:</span>
+                </div>
+                <div class="col-9">
+                  <div class="size-options">
+                    <button class="size-btn active">9</button>
+                    <button class="size-btn">7</button>
+                    <button class="size-btn">8</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-3">
+                  <span class="info-label">Color:</span>
+                </div>
+                <div class="col-9">
+                  <div class="color-options">
+                    <button class="color-btn black active"></button>
+                    <button class="color-btn grey"></button>
+                    <button class="color-btn white"></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-3">
+                  <span class="info-label">Material:</span>
+                </div>
+                <div class="col-9">
+                  <div class="material-options">
+                    <button class="material-btn active">rubber</button>
+                    <button class="material-btn">plastics</button>
+                    <button class="material-btn">leather</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-3">
+                  <span class="info-label">Vendor:</span>
+                </div>
+                <div class="col-9">
+                  <span class="color-green-detail">Havaianas</span>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-3">
+                  <span class="info-label">Type:</span>
+                </div>
+                <div class="col-9">
+                  <span class="color-green-detail">shoes</span>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-3">
+                  <span class="info-label">Availability:</span>
+                </div>
+                <div class="col-9">
+                  <span class="color-green-detail">In stock!</span>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-3">
+                  <span class="info-label">Quantity:</span>
+                </div>
+                <div class="col-9">
+                  <div class="quantity-selector">
+                    <button class="quantity-btn minus">-</button>
+                    <input
+                      type="text"
+                      class="quantity-input"
+                      value="1"
+                      readonly
+                    />
+                    <button class="quantity-btn plus">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-12">
+                  <div class="d-flex flex-wrap gap-2">
+                    <button class="btn btn-add-cart">ADD TO CART</button>
+                    <button class="btn btn-buy-now">BUY IT NOW</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <button class="btn btn-wishlist">ADD TO WISHLIST</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Professional Description Section -->
+          <div class="col-12 product-description mt-4">
+            <h3 class="mb-3 text-dark">Product Description</h3>
+            <p id="productDescription" class="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer py-5">
+      <div class="container">
+        <!-- Newsletter Section -->
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-12">
+            <h5 class="text-white">Newsletter</h5>
+            <p class="color-green">
+              Sign up for newsletter to receive special offers and exclusive
+              news about Binova products
+            </p>
+          </div>
+          <div class="col-md-8">
+            <form action="/contact#contact_form" method="post" class="row g-2">
+              <input type="hidden" name="form_type" value="customer" />
+              <input type="hidden" name="utf8" value="✓" />
+              <input type="hidden" name="contact[tags]" value="newsletter" />
+              <div class="col-md-9">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  class="form-control"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="col-md-3">
+                <button
+                  style="padding: 12px 0px"
+                  type="submit"
+                  class="btn bg-green1 w-100 text-white"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row border-top pt-4">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">ABOUT US</h5>
+            <p>
+              <span class="color-green">Binova</span> is a premium outdoor gear
+              shop specializing in high-quality equipment for skiing, hiking,
+              and outdoor adventures.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">CATEGORIES</h5>
+            <ul class="footer-links">
+              <li><a href="#">Skiing</a></li>
+              <li><a href="#">Hiking</a></li>
+              <li><a href="#">Camping</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">INFORMATION</h5>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="footer-heading">CONTACT US</h5>
+            <address>
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Mountain Road,
+                Alpine City
+              </p>
+              <p><i class="fas fa-phone me-2"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope me-2"></i> info@binova.com</p>
+            </address>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-3 border-top"
+        >
+          <p class="mb-2 mb-md-0">© 2019 Vinovathemes. All rights reserved.</p>
+          <img
+            src="//binova-vinovatheme.myshopify.com/cdn/shop/files/payment-footer_300x.png?v=1613790433"
+            alt="Payment Methods"
+            style="max-height: 30px"
+          />
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      // Simple quantity selector functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const minusBtn = document.querySelector(".quantity-btn.minus");
+        const plusBtn = document.querySelector(".quantity-btn.plus");
+        const quantityInput = document.querySelector(".quantity-input");
+
+        if (minusBtn && plusBtn && quantityInput) {
+          minusBtn.addEventListener("click", function () {
+            let value = parseInt(quantityInput.value);
+            if (value > 1) {
+              quantityInput.value = value - 1;
+            }
+          });
+
+          plusBtn.addEventListener("click", function () {
+            let value = parseInt(quantityInput.value);
+            quantityInput.value = value + 1;
+          });
+        }
+
+        // Size buttons
+        const sizeButtons = document.querySelectorAll(".size-btn");
+        sizeButtons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            sizeButtons.forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+
+        // Color buttons
+        const colorButtons = document.querySelectorAll(".color-btn");
+        colorButtons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            colorButtons.forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+
+        // Material buttons
+        const materialButtons = document.querySelectorAll(".material-btn");
+        materialButtons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            materialButtons.forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+    <script src="./asset/js/detail.js"></script>
+  </body>
+</html>

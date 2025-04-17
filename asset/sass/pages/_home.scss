@@ -314,6 +314,7 @@
       transition: all 0.6s;
 
       a {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         background: #fff;
         border-radius: 50%;
         width: 35px;
@@ -321,7 +322,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e2e2;
         color: #333;
         text-decoration: none;
         transition: all 0.5s;
