@@ -1,12 +1,11 @@
 @use "../abstracts/variables";
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-  font-family: variables.$font-primary;
-  color: $secondary-color;
-  background-color: $primary-color;
-  overflow-x: hidden;
+    font-family: variables.$font-primary;
+    background-color: $primary-color;
+    overflow-x: hidden;
 }
 
 h1,
@@ -15,23 +14,23 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-heading;
-  font-weight: 700;
+    font-family: $font-heading;
+    font-weight: 700;
 }
 
 a {
-  text-decoration: none;
-  color: variables.$secondary-color;
+    text-decoration: none;
+    color: variables.$secondary-color;
 
-  @include transition();
+    @include transition();
 
-  &:hover {
-    color: $accent-color;
-  }
+    &:hover {
+        color: $accent-color;
+    }
 }
 .color-green {
-  color: $accent-color;
+    color: $accent-color;
 }
 .bg-green {
-  background-color: $accent-color;
+    background-color: $accent-color;
 }
